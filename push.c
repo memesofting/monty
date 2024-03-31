@@ -3,6 +3,7 @@
  * me_push - add node to the stack
  * @head: stack head
  * @counter: line_number
+ * @bus: bus struct
  * Return: no return
 */
 void me_push(stack_t **head, unsigned int counter, bus_t *bus)

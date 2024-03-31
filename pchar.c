@@ -4,6 +4,7 @@
  * followed by a new line
  * @head: stack head
  * @counter: line_number
+ * @bus: bus struct
  * Return: no return
 */
 void me_pchar(stack_t **head, unsigned int counter, bus_t *bus)

@@ -2,6 +2,7 @@
 /**
  * me_div - divides the top two elements of the stack.
  * @head: stack head
+ * @bus: bus struct
  * @counter: line_number
  * Return: no return
 */

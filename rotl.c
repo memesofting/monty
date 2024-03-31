@@ -3,9 +3,11 @@
   *me_rotl- rotates the stack to the top
   *@head: stack head
   *@counter: line_number
+  * @bus: bus struct
   *Return: no return
  */
-void me_rotl(stack_t **head,  __attribute__((unused)) unsigned int counter)
+void me_rotl(stack_t **head,
+__attribute__((unused)) unsigned int counter, bus_t *bus)
 {
 	stack_t *tmp = *head, *aux;
 

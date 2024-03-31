@@ -41,6 +41,7 @@ typedef struct bus_s
 	char *content;
 	int lifi;
 }  bus_t;
+extern bus_t bus;
 
 /**
  * struct instruction_s - opcode and its function
@@ -57,16 +58,14 @@ typedef struct instruction_s
 } instruction_t;
 
 
-extern bus_t bus;
-
-void me_pall(stack_t **head, unsigned int number);
+void me_pall(stack_t **head, unsigned int number, bus_t *bus);
 void me_pint(stack_t **head, unsigned int number, bus_t *bus);
 void me_push(stack_t **head, unsigned int number, bus_t *bus);
 void me_pop(stack_t **head, unsigned int counter, bus_t *bus);
 void me_swap(stack_t **head, unsigned int counter, bus_t *bus);
 void me_add(stack_t **head, unsigned int counter, bus_t *bus);
-void me_nop(stack_t **head, unsigned int counter);
-void me_sub(stack_t **head, unsigned int counter);
+void me_nop(stack_t **head, unsigned int counter, bus_t *bus);
+void me_sub(stack_t **head, unsigned int counter, bus_t *bus);
 void me_div(stack_t **head, unsigned int counter, bus_t *bus);
 void me_mul(stack_t **head, unsigned int counter, bus_t *bus);
 void me_mod(stack_t **head, unsigned int counter, bus_t *bus);
@@ -78,10 +77,11 @@ char *_realloc(char *ptr, unsigned int old_size, unsigned int new_size);
 ssize_t getstdin(char **lineptr, int file);
 char  *clean_line(char *content);
 int execute(char *content, stack_t **head, unsigned int counter, FILE *file);
-void me_rotr(stack_t **head, __attribute__((unused)) unsigned int counter);
+void me_rotr(stack_t **head,
+__attribute__((unused)) unsigned int counter, bus_t *bus);
 void me_pchar(stack_t **head, unsigned int counter, bus_t *bus);
-void me_rotl(stack_t **head, unsigned int counter);
-void me_pstr(stack_t **head, unsigned int counter);
+void me_rotl(stack_t **head, unsigned int counter, bus_t *bus);
+void me_pstr(stack_t **head, unsigned int counter, bus_t *bus);
 void me_free_stack(stack_t *head);
 
 #endif

@@ -3,9 +3,10 @@
   *me_sub- sustration
   *@head: stack head
   *@counter: line_number
+  * @bus: bus struct
   *Return: no return
  */
-void me_sub(stack_t **head, unsigned int counter)
+void me_sub(stack_t **head, unsigned int counter, bus_t *bus)
 {
 	stack_t *aux;
 	int sus, nodes;
@@ -16,8 +17,8 @@ void me_sub(stack_t **head, unsigned int counter)
 	if (nodes < 2)
 	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", counter);
-		fclose(bus.file);
-		free(bus.content);
+		fclose(bus->file);
+		free(bus->content);
 		me_free_stack(*head);
 		exit(EXIT_FAILURE);
 	}

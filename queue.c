@@ -1,8 +1,9 @@
 #include "monty.h"
 /**
- * f_queue - prints the top
+ * me_queue - prints the top
  * @head: stack head
  * @counter: line_number
+ * @bus: bus struct
  * Return: no return
 */
 void me_queue(stack_t **head, unsigned int counter, bus_t *bus)

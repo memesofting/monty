@@ -3,9 +3,11 @@
   *me_rotr- rotates the stack to the bottom
   *@head: stack head
   *@counter: line_number
+  * @bus: bus struct
   *Return: no return
  */
-void me_rotr(stack_t **head, __attribute__((unused)) unsigned int counter)
+void me_rotr(stack_t **head,
+__attribute__((unused)) unsigned int counter, bus_t *bus)
 {
 	stack_t *copy;
 

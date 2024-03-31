@@ -3,6 +3,7 @@
  * me_swap - adds the top two elements of the stack.
  * @head: stack head
  * @counter: line_number
+ * @bus: bus struct
  * Return: no return
 */
 void me_swap(stack_t **head, unsigned int counter, bus_t *bus)
