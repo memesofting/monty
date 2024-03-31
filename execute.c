@@ -7,7 +7,7 @@
 * @content: line content
 * Return: no return
 */
-int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
+int execute(char *content, stack_t **stack, unsigned int counter, FILE *file, bus_t *bus)
 {
 	instruction_t opst[] = {
 				{"push", me_push}, {"pall", me_pall}, {"pint", me_pint},
@@ -33,7 +33,7 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 	op = strtok(content, " \n\t");
 	if (op && op[0] == '#')
 		return (0);
-	bus.arg = strtok(NULL, " \n\t");
+	bus->arg = strtok(NULL, " \n\t");
 	while (opst[i].opcode && op)
 	{
 		if (strcmp(op, opst[i].opcode) == 0)

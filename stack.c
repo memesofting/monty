@@ -5,9 +5,9 @@
  * @counter: line_number
  * Return: no return
 */
-void me_stack(stack_t **head, unsigned int counter)
+void me_stack(stack_t **head, unsigned int counter, bus_t *bus)
 {
 	(void)head;
 	(void)counter;
-	bus.lifi = 0;
+	bus->lifi = 0;
 }

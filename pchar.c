@@ -6,7 +6,7 @@
  * @counter: line_number
  * Return: no return
 */
-void me_pchar(stack_t **head, unsigned int counter)
+void me_pchar(stack_t **head, unsigned int counter, bus_t *bus)
 {
 	stack_t *h;
 
@@ -14,16 +14,16 @@ void me_pchar(stack_t **head, unsigned int counter)
 	if (!h)
 	{
 		fprintf(stderr, "L%d: can't pchar, stack empty\n", counter);
-		fclose(bus.file);
-		free(bus.content);
+		fclose(bus->file);
+		free(bus->content);
 		me_free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
 	if (h->n > 127 || h->n < 0)
 	{
 		fprintf(stderr, "L%d: can't pchar, value out of range\n", counter);
-		fclose(bus.file);
-		free(bus.content);
+		fclose(bus->file);
+		free(bus->content);
 		me_free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
