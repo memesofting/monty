@@ -7,7 +7,7 @@
 * @content: line content
 * Return: no return
 */
-int execute(char *content, stack_t **stack, unsigned int counter, FILE *file, bus_t *bus)
+int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 {
 	instruction_t opst[] = {
 				{"push", me_push}, {"pall", me_pall}, {"pint", me_pint},
